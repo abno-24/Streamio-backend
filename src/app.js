@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import sequelize from "@db/index.js";
 
 const app = express();
 
@@ -9,6 +10,10 @@ app.use(
     credentials: true,
   })
 );
+
+sequelize.sync().then(() => {
+  console.log("Database synchronized");
+});
 
 app.use(express.json({ limit: "16kb" }));
 
