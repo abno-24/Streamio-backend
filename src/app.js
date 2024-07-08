@@ -17,4 +17,6 @@ sequelize.sync().then(() => {
 
 app.use(express.json({ limit: "16kb" }));
 
+
+
 export { app };
