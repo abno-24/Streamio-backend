@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import sequelize from "@db/index.js";
 import userRouter from "@routes/user.routes.js";
+import adminRouter from "@routes/admin.routes.js";
 
 const app = express();
 
@@ -19,6 +20,6 @@ sequelize.sync().then(() => {
 app.use(express.json({ limit: "16kb" }));
 
 // User routes
-app.use("/api/v1/admin/auth", )
+app.use("/api/v1/admin/auth", adminRouter);
 
 export { app };
