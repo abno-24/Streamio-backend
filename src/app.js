@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import sequelize from "@db/index.js";
-import userRouter from "@routes/user.routes.js";
-import adminRouter from "@routes/admin.routes.js";
+import userRouter from "@routes/User/user.routes.js";
+import adminRouter from "@routes/Admin/admin.routes.js";
 
 const app = express();
 
